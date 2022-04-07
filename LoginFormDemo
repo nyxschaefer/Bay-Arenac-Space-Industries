@@ -14,7 +14,6 @@
         JPanel newPanel;  
         JLabel userLabel, passLabel;  
         final JTextField  textField1, textField2;  
-          
         //calling constructor  
         CreateLoginForm()  
         {     

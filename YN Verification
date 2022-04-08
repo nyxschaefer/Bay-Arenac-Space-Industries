@@ -1,1 +1,21 @@
-yo
+import java.util.Scanner;
+
+public class Verification
+{
+        public static void main(String[] args)
+        {
+           
+           Scanner Keyboard = new Scanner (System.in);
+           
+           
+            //Giving the yes and no options values so they can be selected.
+            int Yes = 1;
+            int No = 0;
+            int input;
+            
+            System.out.println("Input blah blah blah.");
+            input = keyboard.nextInt();
+            System.out.println(input);
+
+        }
+}

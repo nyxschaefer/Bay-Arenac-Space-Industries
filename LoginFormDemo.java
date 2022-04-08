@@ -80,7 +80,7 @@
     class LoginFormDemo  
     {  
         //main() method start  
-        public static void main(String arg[])  
+        public static void LoginForm(String arg[])  
         {  
             try  
             {  

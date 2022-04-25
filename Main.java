@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        database astrobase = new database();
 int choice;
 do
 {
@@ -45,7 +44,15 @@ if (choice < 1 || choice > 4)
 return choice;
 }
 
+public static void circle(Scanner keyboard){
 
+}
+public static void database(Scanner keyboard){
+    
+}
+public static void triangle(Scanner keyboard){
+    
+}
 
 
 

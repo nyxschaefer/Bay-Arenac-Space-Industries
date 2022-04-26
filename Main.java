@@ -2,15 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner keyboard = new Scanner(System.in);
-        String password = "F8*3&G84h%0";
-        System.out.println("Password: " + password);
-        System.out.println("Enter Password");
-        String passquery ;
-        passquery = keyboard.nextLine();
-        if (passquery = password){
-
-        }
+   
 
 int choice;
 do

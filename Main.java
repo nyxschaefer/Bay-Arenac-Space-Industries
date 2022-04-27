@@ -2,16 +2,39 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-   
+   //KEYBOARD
         Scanner keyboard = new Scanner(System.in);
+        //SET PASSWORD
         String password = "F8*3&G84h%0";
-        System.out.println("Password: " + password);
-        System.out.println("Enter Password");
-        String passquery ;
-        passquery = keyboard.nextLine();
-     //   if (passquery = password){
+        String passquery;
 
-        //}
+        //DISPLAY PASSWORD
+        System.out.println("Password: " + password);
+        
+        //DO STATEMENT
+        do{
+
+        //GET PASSWORD INPUT FROM USER
+        System.out.println("Enter Password");
+        passquery = keyboard.nextLine();
+
+        //IF STATEMENT FOR PASSWORD VERIFICATION
+       if (passquery == password){
+
+           //WELCOME MESSAGE
+    System.out.println("Welcome to Bay Arenac Space Industries.");
+       
+       }
+       //ELSE STATEMENT
+       else{
+
+           //INCORRECT PASSWORD MESSAGE
+           System.out.println("Incorrect password, please try again.");
+       }
+    }
+       //WHILE LOOP
+       while(passquery != password);
+    
 
 int choice;
 do
@@ -69,5 +92,5 @@ public static void triangle(Scanner keyboard){
 
 
 
-    
+  
 }

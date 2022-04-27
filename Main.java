@@ -3,6 +3,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
    
+        Scanner keyboard = new Scanner(System.in);
+        String password = "F8*3&G84h%0";
+        System.out.println("Password: " + password);
+        System.out.println("Enter Password");
+        String passquery ;
+        passquery = keyboard.nextLine();
+     //   if (passquery = password){
+
+        //}
 
 int choice;
 do
@@ -13,7 +22,7 @@ do
     // Do what the user requested.
     switch(choice)
     {
-        case 1 : circle(keyboard);
+        case 1 : launch(keyboard);
             break;
         case 2 : database(keyboard);
             break;
@@ -45,8 +54,11 @@ if (choice < 1 || choice > 4)
 return choice;
 }
 
-public static void circle(Scanner keyboard){
-
+public static void launch(Scanner keyboard){
+System.out.println("\n\nThe rocket launches off of the station at 30 meters per second, within 90 seconds the rocket reaches the speed of 2700 meters \nper second.");
+System.out.println("At this point the engines turn off and within 275 seconds the rockets speed decreases by 2697.75, leaving the speed at 2.25 \nmeters per second.");
+System.out.println("The rocket engines turn back on slowly, incresing the speed by 3.75 meters per second, within 5 seconds the rocket reaches 21 \nmeters per second.");
+System.out.println("The engines turn back on fully and within 90 seconds the rocket is acelerating at 2721 meters per second.\n");
 }
 public static void database(Scanner keyboard){
     

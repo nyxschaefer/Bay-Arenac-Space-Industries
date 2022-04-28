@@ -48,7 +48,7 @@ do
             break;
         case 2 : database(keyboard);
             break;
-        case 3 : triangle(keyboard);
+        case 3 : fuel(keyboard);
             break;
         case 4 : System.out.println("Goodbye!");
     }
@@ -90,7 +90,7 @@ printAndSleep("The engines turn back on fully and within 90 seconds the rocket i
 public static void database(Scanner keyboard){
     
 }
-public static void triangle(Scanner keyboard){
+public static void fuel(Scanner keyboard){
     
 }
 

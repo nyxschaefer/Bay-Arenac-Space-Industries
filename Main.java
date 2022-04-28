@@ -17,7 +17,6 @@ public class Main {
         //GET PASSWORD INPUT FROM USER
         System.out.println("Enter Password");
         passquery = keyboard.nextLine();
-        System.out.println("You entered: " + passquery);
         //IF STATEMENT FOR PASSWORD VERIFICATION
        if (passquery.equals(password)){
 
@@ -33,7 +32,7 @@ public class Main {
        }
     }
        //WHILE LOOP
-       while(passquery != password);
+       while(!passquery.equals(password));
     
 
 int choice;

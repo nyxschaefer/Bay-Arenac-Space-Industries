@@ -96,5 +96,6 @@ public static void fuel(Scanner keyboard){
 
 
 
+
   
 }

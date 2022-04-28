@@ -1,19 +1,40 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+   //KEYBOARD
         Scanner keyboard = new Scanner(System.in);
+        //SET PASSWORD
         String password = "F8*3&G84h%0";
-        System.out.println("Password: " + password);
-        System.out.println("Enter Password");
-        String passquery ;
-        passquery = keyboard.nextLine();
-     //   if (passquery = password){
+        String passquery;
 
-        //}
-        System.out.println("'Welcome to BASI! You are about to depart on our very first rocket into space!'");
-        System.out.println("'If you look to your left you will see our trusted personel loading the rocket with fuel and suplies.'");
-        System.out.println("You look around the base for a few minutes and decide to enter the rocket without telling anyone or grabing any supplies.");
+        //DISPLAY PASSWORD
+        System.out.println("Password: " + password);
+        
+        //DO STATEMENT
+        do{
+
+        //GET PASSWORD INPUT FROM USER
+        System.out.println("Enter Password");
+        passquery = keyboard.nextLine();
+        //IF STATEMENT FOR PASSWORD VERIFICATION
+       if (passquery.equals(password)){
+
+           //WELCOME MESSAGE
+    System.out.println("Welcome to Bay Arenac Space Industries.");
+       
+       }
+       //ELSE STATEMENT
+       else{
+
+           //INCORRECT PASSWORD MESSAGE
+           System.out.println("Incorrect password, please try again.");
+       }
+    }
+       //WHILE LOOP
+       while(!passquery.equals(password));
+    
+
 int choice;
 do
 {
@@ -27,7 +48,7 @@ do
             break;
         case 2 : database(keyboard);
             break;
-        case 3 : triangle(keyboard);
+        case 3 : fuel(keyboard);
             break;
         case 4 : System.out.println("Goodbye!");
     }
@@ -40,7 +61,7 @@ do
 
         System.out.println("1. Continue with the mission");
         System.out.println("2. Astronaut information");
-        System.out.println("3. Speed and fuel left in tank");
+        System.out.println("3. Fuel left in tank");
         System.out.println("4. Quit\n");
         System.out.print("Enter your choice (1-4) : ");
 
@@ -55,22 +76,26 @@ if (choice < 1 || choice > 4)
 return choice;
 }
 
-public static void launch(Scanner keyboard){
-    System.out.println("You stay on the rocket for awhile ");
-System.out.println("\n\nThe rocket launches off of the station at 30 meters per second, within 90 seconds the rocket reaches the speed of 2700 meters \nper second.");
-System.out.println("At this point the engines turn off and within 275 seconds the rockets speed decreases by 2697.75, leaving the speed at 2.25 \nmeters per second.");
-System.out.println("The rocket engines turn back on slowly, incresing the speed by 3.75 meters per second, within 5 seconds the rocket reaches 21 \nmeters per second.");
-System.out.println("The engines turn back on fully and within 90 seconds the rocket is acelerating at 2721 meters per second.\n");
+static void printAndSleep(String string, int sleepTimeMs) throws InterruptedException {
+    System.out.println(string);
+    Thread.sleep(sleepTimeMs);
+  }
+
+public static void launch(Scanner keyboard) throws InterruptedException{
+printAndSleep("\n\nThe rocket launches off of the station at 30 meters per second, within 90 seconds the rocket reaches the speed of 2700 meters \nper second.", 2000);
+printAndSleep("At this point the engines turn off and within 275 seconds the rockets speed decreases by 2697.75, leaving the speed at 2.25 \nmeters per second.", 2000);
+printAndSleep("The rocket engines turn back on slowly, incresing the speed by 3.75 meters per second, within 5 seconds the rocket reaches 21 \nmeters per second.", 2000);
+printAndSleep("The engines turn back on fully and within 90 seconds the rocket is acelerating at 2721 meters per second.\n", 2000);
 }
 public static void database(Scanner keyboard){
     
 }
-public static void triangle(Scanner keyboard){
-    System.out.println("Speed: 2721 meters per second");
-    System.out.println("Fuel left in tank: ");
+public static void fuel(Scanner keyboard){
+    
 }
 
 
 
-    
+
+  
 }

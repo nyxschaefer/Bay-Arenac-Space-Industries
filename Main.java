@@ -17,9 +17,9 @@ public class Main {
         //GET PASSWORD INPUT FROM USER
         System.out.println("Enter Password");
         passquery = keyboard.nextLine();
-
+        System.out.println("You entered: " + passquery);
         //IF STATEMENT FOR PASSWORD VERIFICATION
-       if (passquery == password){
+       if (passquery.equals(password)){
 
            //WELCOME MESSAGE
     System.out.println("Welcome to Bay Arenac Space Industries.");

@@ -21,7 +21,7 @@ public class Main {
        if (passquery.equals(password)){
 
            //WELCOME MESSAGE
-    System.out.println("Welcome to Bay Arenac Space Industries.");
+        System.out.println("Welcome to Bay Arenac Space Industries. The rocket is fully prepared for take off.\n");
        
        }
        //ELSE STATEMENT
@@ -82,14 +82,17 @@ static void printAndSleep(String string, int sleepTimeMs) throws InterruptedExce
   }
 
 public static void launch(Scanner keyboard) throws InterruptedException{
-printAndSleep("\n\nThe rocket launches off of the station at 30 meters per second, within 90 seconds the rocket reaches the speed of 2700 meters \nper second.", 2000);
-printAndSleep("At this point the engines turn off and within 275 seconds the rockets speed decreases by 2697.75, leaving the speed at 2.25 \nmeters per second.", 2000);
-printAndSleep("The rocket engines turn back on slowly, incresing the speed by 3.75 meters per second, within 5 seconds the rocket reaches 21 \nmeters per second.", 2000);
-printAndSleep("The engines turn back on fully and within 90 seconds the rocket is acelerating at 2721 meters per second.\n", 2000);
+    printAndSleep("The rocket slowly prepares to take off in....",2000);
+    printAndSleep("3",2000);
+    printAndSleep("2",2000);
+    printAndSleep("1",2000);
+    printAndSleep("\nThe rocket launches off of the station releasing 1 pound of fuel per second, within 60 seconds the rocket reaches the speed of 1800 meters per second.", 3000);
+    printAndSleep("By 65 seconds the rocket has reached a speed of 1950 meters per second, and traveled 64,359 meters.",3000);
+    printAndSleep("The rocket leaves the atmosphere by 68 seconds having traveled 70,380 meters.\n\n",3000);
 }
 public static void database(Scanner keyboard) throws InterruptedException{
     String astronaut1 = ("Jenna");
-    String astronaut2 = ("Gabe");
+    String astronaut2 = ("Name: Gabe\nDOB: 01/31/04\nID: 02\nAddress: 346 Park Ave. NY, NY\nEmail Address: AGHHHHHHOHMYGODHELP@gmail.com\nPhone #: (989)666-1337\nPay Wage: $100/hour\nWeight:  ");
     String astronaut3 = ("Kevin");
     String astronaut4 = ("Lance");
     String astronaut5 = ("");
@@ -98,10 +101,10 @@ public static void database(Scanner keyboard) throws InterruptedException{
     String astronaut8 = ("");
     String astronaut9 = ("");
     String astronaut10 = ("");
-    printAndSleep("Astronaut 01: " + astronaut1, 2000);
-    printAndSleep("Astronaut 02: " + astronaut2, 2000);
-    printAndSleep("Astronaut 03: " + astronaut3, 2000);
-    printAndSleep("Astronaut 04: " + astronaut4, 2000);
+    printAndSleep("Astronaut 01: " + astronaut1, 1000);
+    printAndSleep("Astronaut 02: " + astronaut2, 1000);
+    printAndSleep("Astronaut 03: " + astronaut3, 1000);
+    printAndSleep("Astronaut 04: " + astronaut4 +"\n", 1000);
     databasemenu(keyboard);
 }
 public static void fuel(Scanner keyboard){

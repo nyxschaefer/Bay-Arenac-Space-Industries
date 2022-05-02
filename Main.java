@@ -112,15 +112,71 @@ printAndSleep("The rocket leaves the atmosphere by 68 seconds having traveled 70
 
 
 }
-public static void database(Scanner keyboard){
-    
+public static void database(Scanner keyboard) throws InterruptedException{
+    String astronaut1 = ("Jenna");
+    String astronaut2 = ("Gabe");
+    String astronaut3 = ("Kevin");
+    String astronaut4 = ("Lance");
+    String astronaut5 = ("");
+    String astronaut6 = ("");
+    String astronaut7 = ("");
+    String astronaut8 = ("");
+    String astronaut9 = ("");
+    String astronaut10 = ("");
+    printAndSleep("Astronaut 01: " + astronaut1, 2000);
+    printAndSleep("Astronaut 02: " + astronaut2, 2000);
+    printAndSleep("Astronaut 03: " + astronaut3, 2000);
+    printAndSleep("Astronaut 04: " + astronaut4, 2000);
+    databasemenu(keyboard);
 }
 public static void fuel(Scanner keyboard){
     
 }
+public static void databasemenu(Scanner keyboard) throws InterruptedException{
+    int choice2;
+do
+{
+    // Get the user's menu choice.
+    choice2 = getMenu2Choice(keyboard);
 
+    // Do what the user requested.
+    switch(choice2)
+    {
+        case 1 : launch(keyboard);
+            break;
+        case 2 : database(keyboard);
+            break;
+        case 3 : fuel(keyboard);
+            break;
+        case 4 : System.out.println("Goodbye!");
+    }
+        } while (choice2 != 4);
+            }
+    public static int getMenu2Choice(Scanner keyboard)
+    {
+        int choice2;
+
+
+        System.out.println("1. Add Astronaut");
+        System.out.println("2. Edit Astronaut");
+        System.out.println("3. Delete Astronaut");
+        System.out.println("4. Go Back\n");
+        System.out.print("Enter your choice (1-4) : ");
+
+choice2 = keyboard.nextInt();
+
+if (choice2 < 1 || choice2 > 4)
+{
+    System.out.print("Error: Enter 1, 2, 3, or 4: ");
+    choice2 = keyboard.nextInt();
+}
+
+return choice2;
+}
+
+}
 
 
 
   
-}
+

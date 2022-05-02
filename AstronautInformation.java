@@ -3,26 +3,27 @@ import java.io.FileWriter;
 import java.io.File;
  public class AstronautInformation {
     public static void astro(String userName){
-        Scanner scan = new Scanner(System.in); 
-        int x = 0;
-                    
-        while(x != 4){
-          System.out.printf("1.Add Astronauts to the HSI.\n2.Remove the astronauts who have left us.\n3.Return To Main Menu\n");
-                int counter = scan.nextInt(); 
+        try (Scanner scan = new Scanner(System.in)) {
+          int x = 0;
+                      
+          while(x != 4){
+            System.out.printf("1.Add Astronauts to the HSI.\n2.Remove the astronauts who have left us.\n3.Return To Main Menu\n");
+                  int counter = scan.nextInt(); 
+                 
+              if(counter == 1){
+                add(userName);
+              }
+              else if(counter == 2){
+                remove(userName);
+              }
+              else if(counter == 3){
                
-            if(counter == 1){
-              add(userName);
+              }
+              else{
+                System.out.println("Thank you for using our program.");
+              }
             }
-            else if(counter == 2){
-              remove(userName);
-            }
-            else if(counter == 3){
-             
-            }
-            else{
-              System.out.println("Thank you for using our program.");
-            }
-          }
+        }
   }
     
     public static void add(String userName){

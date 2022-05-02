@@ -88,7 +88,8 @@ printAndSleep("The rocket engines turn back on slowly, incresing the speed by 3.
 printAndSleep("The engines turn back on fully and within 90 seconds the rocket is acelerating at 2721 meters per second.\n", 2000);
 }
 public static void database(Scanner keyboard){
-    
+    String placeholder = "AstronautInfo";
+    AstronautInformation.astro(placeholder);
 }
 public static void fuel(Scanner keyboard){
     

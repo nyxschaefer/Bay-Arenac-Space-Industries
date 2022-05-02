@@ -46,7 +46,7 @@ public class Main {
 
 int choice;
 //int choice2;
-do{
+
 do 
 {
     // Get the user's menu choice.
@@ -64,7 +64,7 @@ do
         case 4 : System.out.println("Goodbye!");
     }
         } while (choice != 4);
-    }while (choice != 1);
+    
 
             }
     public static int getMenuChoice(Scanner keyboard)
@@ -105,6 +105,12 @@ printAndSleep("The rocket leaves the atmosphere by 68 seconds having traveled 70
 //printAndSleep("At this point the engines turn off and within 275 seconds the rockets speed decreases by 2697.75 meters, leaving the speed at 2.25 meters per second.", 4000);
 //printAndSleep("The rocket engines turn back on slowly, incresing the speed by 3.75 meters per second, within 5 seconds the rocket reaches 21 meters per second.", 4000);
 //printAndSleep("The engines turn back on fully and within 90 seconds the rocket is acelerating at 2721 meters per second.\n", 4000);
+
+
+
+
+
+
 }
 public static void database(Scanner keyboard){
     
@@ -112,10 +118,6 @@ public static void database(Scanner keyboard){
 public static void fuel(Scanner keyboard){
     
 }
-
-
-
-
 
 
 

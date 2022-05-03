@@ -1,41 +1,13 @@
 import java.util.Scanner;
-import java.io.FileWriter;
-import java.io.File;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
+      int verify = 0;
    //KEYBOARD
+   verify++;
         Scanner keyboard = new Scanner(System.in);
-        //SET PASSWORD
-        String password = "F8*3&G84h%0";
-        String passquery;
-
-        //DISPLAY PASSWORD
-        System.out.println("Password: " + password);
-        
-        //DO STATEMENT
-        do{
-
-        //GET PASSWORD INPUT FROM USER
-        System.out.println("Enter Password");
-        passquery = keyboard.nextLine();
-        //IF STATEMENT FOR PASSWORD VERIFICATION
-       if (passquery.equals(password)){
-
-           //WELCOME MESSAGE
-        System.out.println("Welcome to Bay Arenac Space Industries. The rocket is fully prepared for take off.\n");
-       
-       }
-       //ELSE STATEMENT
-       else{
-
-           //INCORRECT PASSWORD MESSAGE
-           System.out.println("Incorrect password, please try again.");
-       }
-    }
-       //WHILE LOOP
-       while(!passquery.equals(password));
-    
+        if(verify < 2){
+        Login.main(); }
        int choice;
        String userName = "";
 do
@@ -95,6 +67,10 @@ public static void launch(Scanner keyboard) throws InterruptedException{
     printAndSleep("The rocket leaves the atmosphere by 68 seconds having traveled 70,380 meters.\n\n",3000);
 }
 public static void fuel(Scanner keyboard){
+}
+
+
+public static void main() {
 }       
       }
     

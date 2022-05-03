@@ -45,17 +45,17 @@ public void setName(String n){
 /** 
      @param b The astronauts date of birth
      */
-
+/*
     public void setBirth(String b){
        dateBirth = b;
-    }
+    } */
     /**
       @param p The astornauts payRate
      */
-
+/*
     public void setPay(int p){
         payRate = p;
-    }
+    }*/
     /**@param w The astornauts weight
     */
 
@@ -102,12 +102,12 @@ public void setName(String n){
      public String getPhone(){
          return phone;
         }
-    public String getBirth(){
+   /* public String getBirth(){
         return dateBirth;
     } 
     public double getPay(){
         return payRate;
-    }
+    }*/
     public int getWeight(){
         return weight;
     }

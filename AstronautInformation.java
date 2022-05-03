@@ -17,7 +17,7 @@ import java.io.File;
                 remove(userName);
               }
               else if(counter == 3){
-               Main.main(null);
+               Main.main();
               }
               else{
                 System.out.println("Thank you for using our program.");
@@ -35,7 +35,7 @@ import java.io.File;
           System.out.println("What is the name of the Astronaut joining us at BASI?");
             String name = scan.nextLine();
        astro.setName(name);
-          System.out.println("What is the age of " + astro.getName());
+          System.out.println("What is the Age of " + astro.getName());
             int age = scan.nextInt();
        astro.setAge(age);
         System.out.printf("\nWhere does this astronaut live?");
@@ -55,7 +55,6 @@ import java.io.File;
             String kin = scan.nextLine();
             kin = scan.nextLine();
             astro.setKin(kin);
-            scan.close();
             try{
               File f = new File(userName + "astroInfo.csv");
               
@@ -64,8 +63,8 @@ import java.io.File;
                 pw.append(astro.getAge() + ", ");
                 pw.append(astro.getAddress() + ", ");
                 pw.append(astro.getPhone() + ", ");
-                pw.append(astro.getBirth() + ", ");
-                pw.append(astro.getPay() + ", ");
+                /*pw.append(astro.getBirth() + ", ");
+                pw.append(astro.getPay() + ", ");*/
                 pw.append(astro.getWeight() + ", ");
                 pw.append(astro.nextKin() + ", ");
                 pw.append("\n");
@@ -112,4 +111,5 @@ import java.io.File;
     public static void edit(){
 
       }
+      
     }

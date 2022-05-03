@@ -24,6 +24,7 @@ public static void launch(Scanner keyboard) throws InterruptedException{
     printAndSleep("By 65 seconds the rocket has reached a speed of 1950 meters per second, and traveled 64,359 meters.",3000);
     printAndSleep("The rocket leaves the atmosphere by 68 seconds having traveled 70,380 meters.\n\n",3000);
 }
+
 public static void fuel(Scanner keyboard){
 }
 

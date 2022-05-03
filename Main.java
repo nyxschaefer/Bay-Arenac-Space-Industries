@@ -25,10 +25,9 @@ public static void launch(Scanner keyboard) throws InterruptedException{
     printAndSleep("The rocket leaves the atmosphere by 68 seconds having traveled 70,380 meters.\n\n",3000);
 }
 
-public static void fuel(Scanner keyboard){
+public static void fuel(Scanner keyboard) throws InterruptedException{
+printAndSleep("You have 68 pounds of fuel on board",2000);
+menu.main();
 }
-
+}
 //lol
-public static void main() {
-}       
-      }

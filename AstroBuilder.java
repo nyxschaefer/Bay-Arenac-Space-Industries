@@ -5,9 +5,9 @@ public class AstroBuilder
     private String address;    // A person's address
     private String phone;      // A person's phone number
     private String dateBirth; // A person's date of birth
-    private int payRate;     // How much the glorious astronauts of the HSI are paid
-    private int weight;       // Weight of the breathtaking astronauts of the HSI
-    private String nextOfKin; // Lucky family of the astronauts of the HSI.
+    private int payRate;     // How much the glorious astronauts of BASI are paid
+    private int weight;       // Weight of the breathtaking astronauts of BASI
+    private String nextOfKin; // Lucky family of the astronauts of BASI.
 
     /**
      The setName method sets  the person's name.

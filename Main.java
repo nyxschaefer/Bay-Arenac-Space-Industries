@@ -31,11 +31,3 @@ public static void fuel(Scanner keyboard){
 public static void main() {
 }       
       }
-
-
-
-
-
-
-  
-

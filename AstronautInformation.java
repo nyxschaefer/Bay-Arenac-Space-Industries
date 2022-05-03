@@ -17,7 +17,7 @@ import java.io.File;
                 remove(userName);
               }
               else if(counter == 3){
-               Main.main();
+                menu.main();
               }
               else{
                 System.out.println("Thank you for using our program.");

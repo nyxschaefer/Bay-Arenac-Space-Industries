@@ -4,8 +4,8 @@ public class AstroBuilder
     private int age;           // A person's age
     private String address;    // A person's address
     private String phone;      // A person's phone number
-    private String dateBirth; // A person's date of birth
-    private int payRate;     // How much the glorious astronauts of BASI are paid
+   // private String dateBirth; // A person's date of birth
+   // private int payRate;     // How much the glorious astronauts of BASI are paid
     private int weight;       // Weight of the breathtaking astronauts of BASI
     private String nextOfKin; // Lucky family of the astronauts of BASI.
 

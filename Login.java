@@ -23,7 +23,7 @@ try (//KEYBOARD
 
                    //WELCOME MESSAGE
                 System.out.println("Welcome to Bay Arenac Space Industries. The rocket is fully prepared for take off.\n");
-                Main.main();
+                menu.main();
        }
        //ELSE STATEMENT
        else{

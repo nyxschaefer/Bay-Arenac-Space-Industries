@@ -9,6 +9,7 @@ public class Main {
     }
        
 
+
 static void printAndSleep(String string, int sleepTimeMs) throws InterruptedException {
     System.out.println(string);
     Thread.sleep(sleepTimeMs);
@@ -26,7 +27,7 @@ public static void launch(Scanner keyboard) throws InterruptedException{
 public static void fuel(Scanner keyboard){
 }
 
-
+//lol
 public static void main() {
 }       
       }

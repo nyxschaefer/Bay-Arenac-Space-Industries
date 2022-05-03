@@ -15,6 +15,7 @@ _______________________
 
     3d. (4) Exit, closes program and logs out user
     
+    
 **HOW TO USE ASTROBASE**                                                      
 _______________________
 

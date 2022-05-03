@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class Login
 {
         public static void main() throws InterruptedException
+        
         {
 try (//KEYBOARD
         Scanner keyboard = new Scanner(System.in)) {
@@ -28,7 +29,7 @@ try (//KEYBOARD
        //ELSE STATEMENT
        else{
 
-                   //INCORRECT PASSWORD MESSAGE
+                   ////INCORRECT PASSWORD MESSAGE
                    System.out.println("Incorrect password, please try again.");
        }
     }

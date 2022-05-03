@@ -2,9 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-   try (//KEYBOARD
-        Scanner keyboard = new Scanner(System.in)) {
-        }
+   //KEYBOARD
+        Scanner keyboard = new Scanner(System.in);
     //LOGIN
        Login.main(); 
     }

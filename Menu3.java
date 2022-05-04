@@ -32,7 +32,7 @@ public class Menu3
              {
                  int choice;
          
-         
+         //menu choices
                  System.out.println("1. Start over");
                  System.out.println("2. Astronaut information");
                  System.out.println("3. Fuel left in tank");

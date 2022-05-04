@@ -1,9 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws InterruptedException {
-   //KEYBOARD
-        Scanner keyboard = new Scanner(System.in);
+    public static void main(String[] args) throws InterruptedException{
     //LOGIN
     PasswordGenerator passwordGenerator = new PasswordGenerator.PasswordGeneratorBuilder()
         .useDigits(true)

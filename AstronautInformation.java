@@ -6,17 +6,20 @@ import java.io.File;
         try (Scanner scan = new Scanner(System.in)) {
           int x = 0;
                       
-          while(x != 4){
-            System.out.printf("1.Add Astronauts to BASI.\n2.Remove the astronauts who have left us.\n3.Return To Main Menu\n");
+          while(x != 5){
+            System.out.printf("1.View Astronauts\n2.Add Astronauts to BASI.\n3.Remove the astronauts who have left us.\n4.Return To Main Menu\n");
                   int counter = scan.nextInt(); 
                  
               if(counter == 1){
-                add(userName);
+                CsvReader.main(null);
               }
               else if(counter == 2){
-                remove(userName);
+                add(userName);
               }
               else if(counter == 3){
+                remove(userName);
+              }
+              else if(counter == 4){
                 menu.main();
               }
               else{
@@ -27,85 +30,90 @@ import java.io.File;
   }
     
     public static void add(String userName) throws InterruptedException{
-       Scanner scan = new Scanner(System.in);
-       AstroBuilder astro = new AstroBuilder();
-       System.out.println("Add an astronaut to BASI?");
-       String aws = scan.nextLine();
-       if(aws.equalsIgnoreCase("Yes")){
-          System.out.println("What is the name of the Astronaut joining us at BASI?");
-            String name = scan.nextLine();
-       astro.setName(name);
-          System.out.println("What is the Age of " + astro.getName());
-            int age = scan.nextInt();
-       astro.setAge(age);
-        System.out.printf("\nWhere does this astronaut live?");
-           String address = scan.nextLine();
-            address = scan.nextLine();
-          astro.setAddress(address);
-        System.out.println("Alright, and what is " + astro.getName() + "'s phone number");
-             String number = scan.nextLine();
-             astro.setPhone(number);
-            System.out.println("And how much does this astronaut weigh?");
-           int weight = scan.nextInt();  
-           astro.setWeight(weight);
-                if(weight >= 420){
-                  System.out.println("Having an overweight astronaut is dangerous, and more importantly bad for our reputation, tell " + astro.getName() + " to go on a diet");
-                       }     
-        System.out.println("This astronaut, does he have any next of kin? P.S seperate with commas.");
-            String kin = scan.nextLine();
-            kin = scan.nextLine();
-            astro.setKin(kin);
-            try{
-              File f = new File(userName + "astroInfo.csv");
+       try (Scanner scan = new Scanner(System.in)) {
+        AstroBuilder astro = new AstroBuilder();
+         System.out.println("Add an astronaut to BASI?");
+         String aws = scan.nextLine();
+         if(aws.equalsIgnoreCase("Yes")){
+            System.out.println("What is the name of the Astronaut joining us at BASI?");
+              String name = scan.nextLine();
+         astro.setName(name);
+            System.out.println("What is the Age of " + astro.getName());
+              int age = scan.nextInt();
+         astro.setAge(age);
+          System.out.printf("Where does this astronaut live?\n");
+             String address = scan.nextLine();
+              address = scan.nextLine();
+            astro.setAddress(address);
+          System.out.println("Alright, and what is " + astro.getName() + "'s phone number");
+               String number = scan.nextLine();
+               astro.setPhone(number);
+              System.out.println("And how much does this astronaut weigh?");
+             int weight = scan.nextInt();  
+             astro.setWeight(weight);
+                  if(weight >= 420){
+                    System.out.println("Having an overweight astronaut is dangerous, and more importantly bad for our reputation, tell " + astro.getName() + " to go on a diet");
+                         }     
+          System.out.println("This astronaut, does he have any next of kin? P.S seperate with commas.");
+              String kin = scan.nextLine();
+              kin = scan.nextLine();
+              astro.setKin(kin);
+              try{
+                File f = new File(userName + "astroInfo.csv");
+                
+                  try (FileWriter pw = new FileWriter(f, true)) {
+                    pw.append(astro.getName() + ", ");
+                    pw.append(astro.getAge() + ", ");
+                    pw.append(astro.getAddress() + ", ");
+                    pw.append(astro.getPhone() + ", ");
+                    /*pw.append(astro.getBirth() + ", ");
+                    pw.append(astro.getPay() + ", ");*/
+                    pw.append(astro.getWeight() + ", ");
+                    pw.append(astro.nextKin() + ", ");
+                    pw.append("\n");
+                  }
+                  System.out.println("Congrats, Astronaut Successfully Created.");
               
-                FileWriter pw = new FileWriter(f, true);
-                pw.append(astro.getName() + ", ");
-                pw.append(astro.getAge() + ", ");
-                pw.append(astro.getAddress() + ", ");
-                pw.append(astro.getPhone() + ", ");
-                /*pw.append(astro.getBirth() + ", ");
-                pw.append(astro.getPay() + ", ");*/
-                pw.append(astro.getWeight() + ", ");
-                pw.append(astro.nextKin() + ", ");
-                pw.append("\n");
-              
-            System.out.println("Congrats, Astronaut Successfully Created.");
-            
-            }
-            catch(Exception e){
-              System.out.println(e.getMessage());
-            }
-            astro(userName);
-      }
-        else{
-          System.out.println("Please make up your mind,");
+              }
+              catch(Exception e){
+                System.out.println(e.getMessage());
+              }
+              astro(userName);
         }
+          else{
+            System.out.println("Please make up your mind,");
+          }
+      }
       
         }
         public static void remove(String userName){
-          Scanner scr = new Scanner(System.in);
-          Scanner fileScan = new Scanner(userName + "astroInfo.csv");
-          System.out.println("Remove an astronaut from BASI?");
-          String aws = scr.nextLine();
-          if(aws.equalsIgnoreCase("Yes")){ 
-          System.out.println("Please enter the name of the Astronaut you wish to remove.");
-                String name = scr.nextLine();
-                while (fileScan.hasNextLine()) {
-                  String line = fileScan.nextLine();
-                  boolean bool;
-                  bool = line.contains(name);
-                  if(bool == true){
-                    System.out.println("Success");
-                  }
-                  else{
-                    System.out.println("Failure");
-                  }
-                  
-          }
-        }
-          else{
-            System.out.println("Please make up your mind.");
+          try (Scanner scr = new Scanner(System.in)) {
+            try (Scanner fileScan = new Scanner(userName + "astroInfo.csv")) {
+              System.out.println("Remove an astronaut from BASI?");
+              String aws = scr.nextLine();
+              if(aws.equalsIgnoreCase("Yes")){ 
+              System.out.println("Please enter the name of the Astronaut you wish to remove.");
+                    String name = scr.nextLine();
+                    while (fileScan.hasNextLine()) {
+                      String line = fileScan.nextLine();
+                      boolean bool;
+                      bool = line.contains(name);
+                      if(bool == true){
+                        System.out.println("Success");
+                      }
+                      else{
+                        System.out.println("Failure");
+                      }
+                      
+              }
+  }
+              else{
+                System.out.println("Please make up your mind.");
+              }
+            }
           }    
           }
+          
       
     }
+  

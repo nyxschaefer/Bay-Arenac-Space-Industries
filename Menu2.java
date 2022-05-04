@@ -56,7 +56,9 @@ public class Menu2
          public static void story2(Scanner keyboard) throws InterruptedException{
 
                 printAndSleep("At this point the rocket is in space and runs out of fuel, entering a free fall, dritfting for another 211090 meters.",3000);
-                printAndSleep("While the rocket drifts the astronauts do an EVA for 5 minutes, during this time the rocket slows to a complete stop within 3 minitues and 28 seconds.",3500);
+                printAndSleep("The rocket slows to a complete stop within 3 minitues and 28 seconds.",3500);
+                printAndSleep("At this point, the astronauts disembark the ship and begin their EVA.",3000);
+                printAndSleep("The ",3000);
                 printAndSleep("At this point the rocket speeds back up, within 250 seconds the rocket has fallen 272031.3 meters.",3000);
                 printAndSleep("With the rocket now 9439 meters from the earth, the parschutes deploy.",2500);
                 printAndSleep("The rocket falls for 22 minutes and 43 seconds before reaching the ground.",2500);

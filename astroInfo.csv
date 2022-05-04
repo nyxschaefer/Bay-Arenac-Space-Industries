@@ -1,0 +1,1 @@
+t, 1, now, s, 3,  cd /home/nyx/Documents/GitHub/Bay-Arenac-Space-Industries ; /usr/bin/env /home/nyx/Downloads/jdk-17.0.1+12/bin/java -XX:+ShowCodeDetailsInExceptionMessages -cp /home/nyx/.config/Code/User/workspaceStorage/56089c7f0c8bbd02eed7b8414f7f3b3d/redhat.java/jdt_ws/Bay-Arenac-Space-Industries_c95544af/bin Main , 

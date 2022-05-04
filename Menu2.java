@@ -27,7 +27,7 @@ public class Menu2
                  } while (choice != 4);
                      }
                  
-         
+         //menu choices
              public static int getMenuChoice(Scanner keyboard)
              {
                  int choice;
@@ -48,11 +48,11 @@ public class Menu2
          
          return choice;
          }
-
+// text timer
          static void printAndSleep(String string, int sleepTimeMs) throws InterruptedException {
                 System.out.println(string);
                 Thread.sleep(sleepTimeMs);}
-
+//continue misson text
          public static void story2(Scanner keyboard) throws InterruptedException{
 
                 printAndSleep("At this point the rocket is in space and runs out of fuel, entering a free fall, dritfting for another 211090 meters.",3000);

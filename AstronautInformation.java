@@ -68,9 +68,9 @@ import java.io.File;
                 pw.append(astro.getWeight() + ", ");
                 pw.append(astro.nextKin() + ", ");
                 pw.append("\n");
-                pw.close();
+              
             System.out.println("Congrats, Astronaut Successfully Created.");
-            scan.close();
+            
             }
             catch(Exception e){
               System.out.println(e.getMessage());
@@ -90,7 +90,6 @@ import java.io.File;
           if(aws.equalsIgnoreCase("Yes")){ 
           System.out.println("Please enter the name of the Astronaut you wish to remove.");
                 String name = scr.nextLine();
-                scr.close();
                 while (fileScan.hasNextLine()) {
                   String line = fileScan.nextLine();
                   boolean bool;
@@ -101,7 +100,7 @@ import java.io.File;
                   else{
                     System.out.println("Failure");
                   }
-                  fileScan.close();
+                  
           }
         }
           else{

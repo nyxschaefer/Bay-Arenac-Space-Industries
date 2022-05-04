@@ -10,7 +10,7 @@ public class Main {
         .useLower(true)
         .useUpper(true)
         .build();
-String password = passwordGenerator.generate(8);
+String password = passwordGenerator.generate(10);
     Login.main(password);
     }
        
@@ -36,4 +36,4 @@ printAndSleep("You have 68 pounds of fuel on board",2000);
 menu.main();
 }
 }
-//lol
+

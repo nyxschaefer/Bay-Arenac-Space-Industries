@@ -2,8 +2,7 @@ import java.util.Scanner;
 public class menu
 {
         static Scanner keyboard = new Scanner(System.in);
-        public static void main() throws InterruptedException
-        {
+        public static void main() throws InterruptedException{
          int choice;
        String userName = "";
 do

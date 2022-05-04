@@ -21,7 +21,9 @@ _______________________
 
 Make selection from list (1, 2, or 3)
 
-    1. Add Astronaut to BASI
+    1. View Astronauts Information
+    
+    2. Add Astronaut to BASI
     
         a. Confirm by entering 'Yes'
         b. Name your astronaut
@@ -31,9 +33,9 @@ Make selection from list (1, 2, or 3)
         f. Enter astronaut's weight
         g. Enter astronaut's next of kin (seperate with commas)
         
-    2. Delete Astronauts
+    3. Delete Astronauts
 
         a. Confirm by entering 'Yes'
         b. Enter name of Astronaut
         
-    3. Go Back to main menu
+    4. Go Back to main menu

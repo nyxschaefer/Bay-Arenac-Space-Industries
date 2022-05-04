@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws InterruptedException {
-   //KEYBOARD
-        Scanner keyboard = new Scanner(System.in);
+    public static void main(String[] args) throws InterruptedException{
     //LOGIN
+   
+   //Getting a randomized password.
     PasswordGenerator passwordGenerator = new PasswordGenerator.PasswordGeneratorBuilder()
         .useDigits(true)
         .useLower(true)
@@ -15,12 +15,12 @@ String password = passwordGenerator.generate(10);
     }
        
 
-
+//Timer for the text display.
 static void printAndSleep(String string, int sleepTimeMs) throws InterruptedException {
     System.out.println(string);
     Thread.sleep(sleepTimeMs);
   }
-
+//The launching of the rocket.
 public static void launch(Scanner keyboard) throws InterruptedException{
     printAndSleep("The rocket slowly prepares to take off in....",2000);
     printAndSleep("3",2000);
@@ -30,7 +30,7 @@ public static void launch(Scanner keyboard) throws InterruptedException{
     printAndSleep("By 65 seconds the rocket has reached a speed of 1950 meters per second, and traveled 64,359 meters.",3000);
     printAndSleep("The rocket leaves the atmosphere by 68 seconds having traveled 70,380 meters.\n\n",3000);
 }
-
+//The amount of fuel in the rocket.
 public static void fuel(Scanner keyboard) throws InterruptedException{
 printAndSleep("You have 68 pounds of fuel on board",2000);
 menu.main();

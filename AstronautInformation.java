@@ -1,8 +1,9 @@
 import java.util.Scanner;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.File;
  public class AstronautInformation {
-    public static void astro(String userName) throws InterruptedException{
+    public static void astro(String userName) throws InterruptedException, IOException{
         try (Scanner scan = new Scanner(System.in)) {
           int x = 0;
                       
@@ -26,7 +27,7 @@ import java.io.File;
         }
   }
     
-    public static void add(String userName) throws InterruptedException{
+    public static void add(String userName) throws InterruptedException, IOException{
        Scanner scan = new Scanner(System.in);
        AstroBuilder astro = new AstroBuilder();
        System.out.println("Add an astronaut to BASI?");

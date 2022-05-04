@@ -5,7 +5,13 @@ public class Main {
    //KEYBOARD
         Scanner keyboard = new Scanner(System.in);
     //LOGIN
-       Login.main(); 
+    PasswordGenerator passwordGenerator = new PasswordGenerator.PasswordGeneratorBuilder()
+        .useDigits(true)
+        .useLower(true)
+        .useUpper(true)
+        .build();
+String password = passwordGenerator.generate(8);
+    Login.main(password);
     }
        
 

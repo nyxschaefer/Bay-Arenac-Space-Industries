@@ -1,8 +1,7 @@
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws InterruptedException, IOException {
+    public static void main(String[] args) throws InterruptedException{
     //LOGIN
     PasswordGenerator passwordGenerator = new PasswordGenerator.PasswordGeneratorBuilder()
         .useDigits(true)
@@ -30,7 +29,7 @@ public static void launch(Scanner keyboard) throws InterruptedException{
     printAndSleep("The rocket leaves the atmosphere by 68 seconds having traveled 70,380 meters.\n\n",3000);
 }
 
-public static void fuel(Scanner keyboard) throws InterruptedException, IOException{
+public static void fuel(Scanner keyboard) throws InterruptedException{
 printAndSleep("You have 68 pounds of fuel on board",2000);
 menu.main();
 }

@@ -1,10 +1,7 @@
-import java.io.IOException;
 import java.util.Scanner;
 public class Login
 {
-        public static void main(String password) throws InterruptedException, IOException
-        
-        {
+        public static void main(String password) throws InterruptedException{
 try (//KEYBOARD
         Scanner keyboard = new Scanner(System.in)) {
                 //SET PASSWORD

@@ -5,7 +5,7 @@ import java.io.File;
     public static void astro(String userName) throws InterruptedException{
         try (Scanner scan = new Scanner(System.in)) {
           int x = 0;
-                      
+               //How the menu options can be selected.       
           while(x != 5){
             System.out.printf("1.View Astronauts\n2.Add Astronauts to BASI.\n3.Remove the astronauts who have left us.\n4.Return To Main Menu\n");
                   int counter = scan.nextInt(); 
@@ -28,7 +28,7 @@ import java.io.File;
             }
         }
   }
-    
+    //How new astronauts are created
     public static void add(String userName) throws InterruptedException{
        try (Scanner scan = new Scanner(System.in)) {
         AstroBuilder astro = new AstroBuilder();
@@ -86,6 +86,7 @@ import java.io.File;
       }
       
         }
+        //The removal of astronauts.
         public static void remove(String userName){
           try (Scanner scr = new Scanner(System.in)) {
             try (Scanner fileScan = new Scanner(userName + "astroInfo.csv")) {

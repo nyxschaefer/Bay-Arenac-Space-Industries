@@ -24,7 +24,7 @@ do
         } while (choice != 4);
             }
         
-
+//menu choices 
     public static int getMenuChoice(Scanner keyboard)
     {
         int choice;

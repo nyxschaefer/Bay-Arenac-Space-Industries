@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Random;
 
 public final class PasswordGenerator {
-
+//How the password is created.
         private static final String LOWER = "abcdefghijklmnopqrstuvwxyz";
         private static final String UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         private static final String DIGITS = "0123456789";

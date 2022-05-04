@@ -1,6 +1,9 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 
+
+//reads out astronaut info/csv reader
+
 public class CsvReader {
     public static void main(String[] args) throws InterruptedException {
        String file = "astroInfo.csv";

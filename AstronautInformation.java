@@ -1,8 +1,13 @@
+import java.util.List;
 import java.util.Scanner;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.File;
- public class AstronautInformation {
-    public static void astro(String userName) throws InterruptedException{
+import java.io.FileReader;
+import au.com.bytecode.opencsv.CSVReader;
+import au.com.bytecode.opencsv.CSVWriter;
+public class AstronautInformation {
+    public static void astro(String userName) throws InterruptedException, IOException{
         try (Scanner scan = new Scanner(System.in)) {
           int x = 0;
                //How the menu options can be selected.       
@@ -29,12 +34,15 @@ import java.io.File;
         }
   }
     //How new astronauts are created
-    public static void add(String userName) throws InterruptedException{
+    public static void add(String userName) throws InterruptedException, IOException{
        try (Scanner scan = new Scanner(System.in)) {
         AstroBuilder astro = new AstroBuilder();
          System.out.println("Add an astronaut to BASI?");
          String aws = scan.nextLine();
          if(aws.equalsIgnoreCase("Yes")){
+          System.out.println("What is the ID Number of the Astronaut?");
+          int id = scan.nextInt();
+          astro.setID(id);
             System.out.println("What is the name of the Astronaut joining us at BASI?");
               String name = scan.nextLine();
          astro.setName(name);
@@ -62,6 +70,7 @@ import java.io.File;
                 File f = new File(userName + "astroInfo.csv");
                 
                   try (FileWriter pw = new FileWriter(f, true)) {
+                    pw.append(astro.getID() + ", ");
                     pw.append(astro.getName() + ", ");
                     pw.append(astro.getAge() + ", ");
                     pw.append(astro.getAddress() + ", ");
@@ -87,20 +96,27 @@ import java.io.File;
       
         }
         //The removal of astronauts.
-        public static void remove(String userName) throws InterruptedException{
+        public static void remove(String userName) throws InterruptedException, IOException{
           try (Scanner scr = new Scanner(System.in)) {
             try (Scanner fileScan = new Scanner(userName + "astroInfo.csv")) {
               System.out.println("Remove an astronaut from BASI?");
               String aws = scr.nextLine();
               if(aws.equalsIgnoreCase("Yes")){ 
-              System.out.println("Please enter the name of the Astronaut you wish to remove.");
-                    String name = scr.nextLine();
+              System.out.println("Please enter the ID of the Astronaut you wish to remove.");
+                    String rowNumber = scr.nextLine();
                     while (fileScan.hasNextLine()) {
                       String line = fileScan.nextLine();
                       boolean bool;
-                      bool = line.contains(name);
+                      bool = line.contains(rowNumber);
                       if(bool == true){
                         System.out.println("Success");
+                        CSVReader reader2 = new CSVReader(new FileReader("astroInfo.csv"));
+                        List<String[]> allElements = reader2.readAll();
+                        allElements.remove(rowNumber);
+                        FileWriter sw = new FileWriter("astroInfo.csv");
+                        CSVWriter writer = new CSVWriter(sw);
+                        writer.writeAll(allElements);
+                        writer.close();
                         AstronautInformation.astro(userName);
                       }
                       else{

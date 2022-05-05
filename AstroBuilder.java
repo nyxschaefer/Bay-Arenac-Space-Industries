@@ -1,5 +1,6 @@
 public class AstroBuilder
 {
+    private int id;            // A person's ID
     private String name;       // A person's name
     private int age;           // A person's age
     private String address;    // A person's address
@@ -9,6 +10,14 @@ public class AstroBuilder
     private int weight;       // Weight of the breathtaking astronauts of BASI
     private String nextOfKin; // Lucky family of the astronauts of BASI.
 
+    /**
+     The setID method sets  the person's ID.
+     @param n The person's name.
+     */
+public void setID(int i){
+    id = i;    
+  
+}    
     /**
      The setName method sets  the person's name.
      @param n The person's name.
@@ -69,6 +78,14 @@ public void setName(String n){
   public void setKin(String k){
       nextOfKin = k;
   }
+  /**
+     The getID method returns the person's ID.
+     @return The person's ID.
+     */
+
+    public int getID(){
+        return id;
+    }
     /**
      The getName method returns the person's name.
      @return The person's name.

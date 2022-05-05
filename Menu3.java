@@ -1,9 +1,10 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 
 public class Menu3
 {
-        public static void main() throws InterruptedException
+        public static void main() throws InterruptedException, IOException
         {
                 Scanner keyboard = new Scanner(System.in);
                 int choice;

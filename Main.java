@@ -1,7 +1,8 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws InterruptedException{
+    public static void main(String[] args) throws InterruptedException, IOException{
     //LOGIN
    
    //Getting a randomized password.
@@ -21,7 +22,7 @@ static void printAndSleep(String string, int sleepTimeMs) throws InterruptedExce
     Thread.sleep(sleepTimeMs);
   }
 //The launching of the rocket.
-public static void launch(Scanner keyboard) throws InterruptedException{
+public static void launch(Scanner keyboard) throws InterruptedException, IOException{
     printAndSleep("The rocket slowly prepares to take off in....",2000);
     printAndSleep("3",2000);
     printAndSleep("2",2000);
@@ -32,7 +33,7 @@ public static void launch(Scanner keyboard) throws InterruptedException{
     Menu2.main();
 }
 //The amount of fuel in the rocket.
-public static void fuel(Scanner keyboard) throws InterruptedException{
+public static void fuel(Scanner keyboard) throws InterruptedException, IOException{
 printAndSleep("You have 68 pounds of fuel on board",2000);
 menu.main();
 }

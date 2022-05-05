@@ -40,22 +40,25 @@ public class AstronautInformation {
          System.out.println("Add an astronaut to BASI?");
          String aws = scan.nextLine();
          if(aws.equalsIgnoreCase("Yes")){
-          System.out.println("What is the ID Number of the Astronaut?");
-          int id = scan.nextInt();
-          astro.setID(id);
+
             System.out.println("What is the name of the Astronaut joining us at BASI?");
               String name = scan.nextLine();
-         astro.setName(name);
-            System.out.println("What is the Age of " + astro.getName());
+              astro.setName(name);
+
+            System.out.println("What is the Age of the Astronaut");
               int age = scan.nextInt();
          astro.setAge(age);
+
           System.out.printf("Where does this astronaut live?\n");
              String address = scan.nextLine();
-              address = scan.nextLine();
             astro.setAddress(address);
-          System.out.println("Alright, and what is " + astro.getName() + "'s phone number");
+
+          System.out.println("Alright, and what is their phone number?");
                String number = scan.nextLine();
                astro.setPhone(number);
+               System.out.println("What is the ID Number of the Astronaut?");
+          int id = scan.nextInt();
+          astro.setID(id);
               System.out.println("And how much does this astronaut weigh?");
              int weight = scan.nextInt();  
              astro.setWeight(weight);
@@ -70,13 +73,12 @@ public class AstronautInformation {
                 File f = new File(userName + "astroInfo.csv");
                 
                   try (FileWriter pw = new FileWriter(f, true)) {
-                    pw.append(astro.getID() + ", ");
                     pw.append(astro.getName() + ", ");
                     pw.append(astro.getAge() + ", ");
                     pw.append(astro.getAddress() + ", ");
                     pw.append(astro.getPhone() + ", ");
-                    /*pw.append(astro.getBirth() + ", ");
-                    pw.append(astro.getPay() + ", ");*/
+                    pw.append(astro.getID() + ", ");
+                    //pw.append(astro.getPay() + ", ");
                     pw.append(astro.getWeight() + ", ");
                     pw.append(astro.nextKin() + ", ");
                     pw.append("\n");

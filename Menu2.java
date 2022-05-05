@@ -59,7 +59,13 @@ public class Menu2
                 printAndSleep("At this point the rocket is in space and runs out of fuel, entering a free fall, dritfting for another 211090 meters.",3000);
                 printAndSleep("The rocket slows to a complete stop within 3 minitues and 28 seconds.",3500);
                 printAndSleep("At this point, the astronauts disembark the ship and begin their EVA.",3000);
-                printAndSleep("The ",3000);
+                printAndSleep("The Astronauts have been is space for: ",3000);
+                printAndSleep("1 Minute",3000);
+                printAndSleep("2 Minutes",3000);
+                printAndSleep("3 Minutes",3000);
+                printAndSleep("4 Minutes",3000);
+                printAndSleep("5 Minutes",3000);
+                printAndSleep("The Astronauts re-enter their ship and strap into their seats.",3000);
                 printAndSleep("At this point the rocket speeds back up, within 250 seconds the rocket has fallen 272031.3 meters.",3000);
                 printAndSleep("With the rocket now 9439 meters from the earth, the parschutes deploy.",2500);
                 printAndSleep("The rocket falls for 22 minutes and 43 seconds before reaching the ground.",2500);

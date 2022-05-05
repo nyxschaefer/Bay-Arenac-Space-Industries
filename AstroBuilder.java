@@ -10,14 +10,7 @@ public class AstroBuilder
     private int weight;       // Weight of the breathtaking astronauts of BASI
     private String nextOfKin; // Lucky family of the astronauts of BASI.
 
-    /**
-     The setID method sets  the person's ID.
-     @param n The person's name.
-     */
-public void setID(int i){
-    id = i;    
-  
-}    
+       
     /**
      The setName method sets  the person's name.
      @param n The person's name.
@@ -55,14 +48,15 @@ public void setName(String n){
      @param b The astronauts date of birth
      */
 /*
-    public void setBirth(String b){
-       dateBirth = b;
-    } */
     /**
-      @param p The astornauts payRate
+     The setID method sets  the person's ID.
+     @param n The person's name.
      */
-/*
-    public void setPay(int p){
+public void setID(int i){
+    id = i;    
+  
+} 
+   /* public void setPay(int p){
         payRate = p;
     }*/
     /**@param w The astornauts weight
@@ -78,14 +72,7 @@ public void setName(String n){
   public void setKin(String k){
       nextOfKin = k;
   }
-  /**
-     The getID method returns the person's ID.
-     @return The person's ID.
-     */
-
-    public int getID(){
-        return id;
-    }
+  
     /**
      The getName method returns the person's name.
      @return The person's name.
@@ -119,10 +106,15 @@ public void setName(String n){
      public String getPhone(){
          return phone;
         }
-   /* public String getBirth(){
-        return dateBirth;
-    } 
-    public double getPay(){
+   /**
+     The getID method returns the person's ID.
+     @return The person's ID.
+     */
+
+    public int getID(){
+        return id;
+    }
+    /*public double getPay(){
         return payRate;
     }*/
     public int getWeight(){

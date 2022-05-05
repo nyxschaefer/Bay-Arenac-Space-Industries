@@ -87,7 +87,7 @@ import java.io.File;
       
         }
         //The removal of astronauts.
-        public static void remove(String userName){
+        public static void remove(String userName) throws InterruptedException{
           try (Scanner scr = new Scanner(System.in)) {
             try (Scanner fileScan = new Scanner(userName + "astroInfo.csv")) {
               System.out.println("Remove an astronaut from BASI?");
@@ -101,15 +101,19 @@ import java.io.File;
                       bool = line.contains(name);
                       if(bool == true){
                         System.out.println("Success");
+                        AstronautInformation.astro(userName);
                       }
                       else{
                         System.out.println("Failure");
+                        AstronautInformation.astro(userName);
                       }
                       
               }
   }
               else{
                 System.out.println("Please make up your mind.");
+                AstronautInformation.astro(userName);
+
               }
             }
           }    

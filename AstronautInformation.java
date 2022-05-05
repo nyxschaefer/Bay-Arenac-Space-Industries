@@ -103,12 +103,12 @@ public class AstronautInformation {
               String aws = scr.nextLine();
               if(aws.equalsIgnoreCase("Yes")){ 
               System.out.println("Please enter the ID of the Astronaut you wish to remove.");
-                    String rowNumber = scr.nextLine();
+                    int rowNumber = scr.nextInt();
                     while (fileScan.hasNextLine()) {
-                      String line = fileScan.nextLine();
-                      boolean bool;
-                      bool = line.contains(rowNumber);
-                      if(bool == true){
+                      //String line = fileScan.nextLine();
+                      //boolean bool;
+                     // bool = line.contains(rowNumber);
+                     // if(bool == true){
                         System.out.println("Success");
                         CSVReader reader2 = new CSVReader(new FileReader("astroInfo.csv"));
                         List<String[]> allElements = reader2.readAll();
@@ -119,22 +119,22 @@ public class AstronautInformation {
                         writer.close();
                         AstronautInformation.astro(userName);
                       }
-                      else{
-                        System.out.println("Failure");
-                        AstronautInformation.astro(userName);
+                     // else{
+                        //System.out.println("Failure");
+                       // AstronautInformation.astro(userName);
                       }
                       
               }
   }
-              else{
-                System.out.println("Please make up your mind.");
-                AstronautInformation.astro(userName);
+             // else{
+               // System.out.println("Please make up your mind.");
+                //AstronautInformation.astro(userName);
 
               }
-            }
+            {}
           }    
-          }
+          
           
       
-    }
+    
   
